@@ -1,5 +1,8 @@
 ANSIBLE:
 
+This tool used to automate Configuration Management, application Deployment, Provisioning VM/Containers
+
+
 Components of Ansible:
 
 Inventory:
@@ -13,9 +16,10 @@ Ordered list of tasks.
 Playbooks are the .yml files which actually contains the actual tasks to be run on the managed nodes.  
 
 Modules:
-The unit of code Ansible executes, each module has a particular functionality.
-The tasks which we run on the managed nodes use the modules to do its tasks.
+A Module is a reusable, standalone script that Ansible runs on your behalf, Module interacts with remoteor local machine 
+or remote machines to perform specific tasks
 
+-creating users -Installing packages -Updating Configurations -Spinning Up Instances...etc
 
 Managed nodes: 
 The nodes which we manage through ansible ( Client nodes)
@@ -26,13 +30,14 @@ The unit of action in Ansible.
 
 LAB Setup:
 
-Control Node:
+Control Node:AMAZON LINUX
+
 1. Create a Amazon linux ec2 instance
 2. Create a user ansadmin/add to sudoer file/enable Password based authentication/rename hostname.
 3. Install Ansible through pip. ( sudo pip install ansible)
 4. Create folder ansible in /etc and create ansible.cfg/hosts file in it.
 
-Managed Node:
+Managed Node:RHEL
 
 1. Create RHEL ec2 intsnance.
 2. create user ansadmin add to sudoer/enable password based authentication/rename hostname.
@@ -40,4 +45,19 @@ Managed Node:
 4. Add rhel-node1 to hosts file.
 5. Try Adhoc commands with the modules ( Ping,command,stat,file,yum,user)
 
-Next Topic
+
+->Inventory File:
+Default invertory file is specified in default ansible configuration file /etc/ansible/ansible.cfg
+you can change the default inventory file in the configuration file or you can specify using "-i".
+
+->Ansible Configuration File:
+
+By Default /etc/ansible/ansible.cfg
+priority
+
+1st environment variables if set
+2nd current working directory
+3rd Home Directory
+4th /etc/ansible/ansible.cfg  
+
+Explain with examples
