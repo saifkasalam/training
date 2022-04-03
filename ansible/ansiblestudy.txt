@@ -61,3 +61,30 @@ priority
 4th /etc/ansible/ansible.cfg  
 
 Explain with examples
+
+
+DAY2:
+
+-> Create a simple playbook for creating a user
+-> Create a playbook to install packages in RHEL
+
+* below in the sample playbook for package installation
+
+---
+- name: instal pacjake in RHEL
+  hosts: all
+  become: true
+  tasks:
+   -name: install packages in Rhel
+     yum:
+      name: <package name>
+      state: installed
+
+-> Create a playbook to create files/directories in managed nodes
+-> Create a playbook to copy file to a remote managed host
+-> Create playbook to install Apache in RHEl and Start the service
+-> Create playbook to stop Apache service and remove Apache from managed node
+-> Create playbook to install Apache and start Service in Ubuntu Machine
+
+ 
+
