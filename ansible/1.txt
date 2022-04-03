@@ -1,0 +1,42 @@
+ANSIBLE:
+
+Components of Ansible:
+
+Inventory:
+It is a file in which you should include the managed nodes IP or Hostnames.
+Without including the hosts in this file you cannot manage the Nodes.
+
+default inventory file: /ets/ansible/hosts
+
+Playbooks:
+Ordered list of tasks.
+Playbooks are the .yml files which actually contains the actual tasks to be run on the managed nodes.  
+
+Modules:
+The unit of code Ansible executes, each module has a particular functionality.
+The tasks which we run on the managed nodes use the modules to do its tasks.
+
+
+Managed nodes: 
+The nodes which we manage through ansible ( Client nodes)
+
+Tasks:
+The unit of action in Ansible.
+
+
+LAB Setup:
+
+Control Node:
+1. Create a Amazon linux ec2 instance
+2. Create a user ansadmin/add to sudoer file/enable Password based authentication/rename hostname.
+3. Install Ansible through pip. ( sudo pip install ansible)
+4. Create folder ansible in /etc and create ansible.cfg/hosts file in it.
+
+Managed Node:
+
+1. Create RHEL ec2 intsnance.
+2. create user ansadmin add to sudoer/enable password based authentication/rename hostname.
+3. ssh-keygen, ssh-copy-id user@host
+4. Add rhel-node1 to hosts file.
+5. Try Adhoc commands with the modules ( Ping,command,stat,file,yum,user)
+
