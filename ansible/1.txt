@@ -40,3 +40,4 @@ Managed Node:
 4. Add rhel-node1 to hosts file.
 5. Try Adhoc commands with the modules ( Ping,command,stat,file,yum,user)
 
+Next Topic
