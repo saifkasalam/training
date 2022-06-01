@@ -86,5 +86,26 @@ DAY2:
 -> Create playbook to stop Apache service and remove Apache from managed node
 -> Create playbook to install Apache and start Service in Ubuntu Machine
 
- 
+DAY3:
 
+-> Explain gather facts "ansible -m setup all"
+-> Create Single playbook for both rhel and ubuntu using "When Condition" (ansible_os_family)
+-> Add copy index.html to two servers and provide '666' permission
+
+-> Notify and Handlers in playbook
+(Only run start service if package installation is done)
+
+-> Ansible Variabes
+ - Define within playbook
+ - passing from external file
+ - passing while running playbooks
+
+-> Convert Shell Commands into a Ansible Playbook
+
+ - Playbook: To setup Tomcat
+ - task1: Install java/default-jdk ( yum/https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat-9.0.62.tar.gzapt )
+ - Download tomcat packagees ( get-url )  
+ - untar tomcat ( unarchive/remote_src )
+ - 0777 permission to startup.sh ( file )
+ - Start tomcat using startup.sh ( shell )
+ 
